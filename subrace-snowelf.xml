@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Snow Elf</name>
+        <description>The Snow Elf subrace by starlightwalker</description>
+        <author url="https://www.gmbinder.com/share/-LnEO8C2rYXE4yA6il1V">starlightwalker</author>
+        <update version="0.0.1">
+            <file name="subrace-snowelf.xml" url="https://github.com/NerdFairchild/snow-elf-subrace.git" />
+        </update>
+    </info>    
+    <element name="Snow Elf" type="Sub Race" source="starlightwalker" id="ID_SUBRACE_SNOW_ELF">
+        <supports>Elf</supports>
+        <description>
+            <p>Snow elves dwell in the brutal mountain peaks of icy realms, where Winter's bite never truly leaves. They guard their lands fiercely and remain isolated from the rest of the world. During the rebellion of the dark elves, the snow elves were deceived into allowing them passage through a critical mountain pass. Since then they have been quietly shunned by other surface elves. This division, combined with a natural haughtiness and hostility towards outsiders, has caused snow elves to have poor relations with other races. Some clans go so far as to conduct raids against high-altitude settlements. Above all others they hate drow, and little can stop a snow elf from bringing violence against drow or their allies. They worship Tarsellis Meunniduin and Rellavar Danuvien almost exclusively, their gods having a similar relationship with the Seldarine and Lolth as their worshippers do with other elves.</p>
+			<p class="indent">Tall and hardy, they are well suited to the difficult lives they live. Their skin is white, pale grey, or pale blue. Their hair is naturally black, silver-white, or grey, although many will dye their hair with brighter streaks of color. Their eyes are generally very pale shades of green or blue, but purple is also seen more rarely, as are darker shades of the same colors. They generally disdain metal decorations and armors (which are impractical in the cold), preferring leather, fur, and bone, but during the rare trading expeditions to the lowland races they covet silver above all else.</p>
+            <h4>Snow ELF TRAITS</h4>
+            <p>Snow elves have the following traits in common, in addition to the traits they share with other elves.</p>
+            <p class="indent"><b><i>Ability Score Increase. </i></b>Your Constitution score increases by 1. </p>
+            <p class="indent"><strong><em>Child of Always Winter.</em></strong> You are acclimated to high altitude, including elevations above 20,000 feet and are naturally adapted to cold climates, as described in chapter 5 of the Dungeon Master’s Guide. In addition, you have advantage on Acrobatics checks to keep your balance on icy surfaces, and moving through difficult terrain composed of ice and snow costs you no extra movement. However, you are poorly suited to hotter climes, and the DC for Constitution saving throws against exhaustion in extreme heat increases by 2 every hour instead of by 1.</p>
+			<p class="indent"><strong><em>Arctic Magic.</em></strong> You know the Ray of Frost and Frostbite cantrips. Wisdom is your spellcasting ability for these spells.</p>
+			<p class="indent"><strong><em>Snow Elf Training.</em></strong> You have proficiency with longbows, shortbows, spears, javelins, and tridents, as well as proficiency in Survival.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <stat name="constitution" value="1" />
+            <grant type="Racial Trait" id="ID_RACIAL_TRAIT_SNOW_ELF_CHILD_OF_ALWAYS_WINTER" />
+            <grant type="Racial Trait" id="ID_RACIAL_TRAIT_SNOW_ELF_ARCTIC_MAGIC" />
+            <grant type="Racial Trait" id="ID_RACIAL_TRAIT_SNOW_ELF_SNOW_ELF_TRAINING" />
+        </rules>
+    </element>
+    <element name="Snow Elf Training" type="Racial Trait" source="starlightwalker" id="ID_RACIAL_TRAIT_SNOW_ELF_SNOW_ELF_TRAINING">
+        <description>
+            <p>ou have proficiency with longbows, shortbows, spears, javelins, and tridents, as well as proficiency in Survival.</p>
+        </description>
+        <sheet display="false">
+            <description>ou have proficiency with longbows, shortbows, spears, javelins, and tridents, as well as proficiency in Survival.</description>
+        </sheet>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_LONGBOW" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SHORTBOW" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SPEAR" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_JAVELIN" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_TRIDENT" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SURVIVAL" />
+        </rules>
+    </element>
+    <element name="Arctic Magic" type="Racial Trait" source="starlightwalker" id="ID_RACIAL_TRAIT_SNOW_ELF_ARCTIC_MAGIC">
+        <description>
+            <p>You know the <em>Ray of Frost</em> and <em>Frostbite</em> cantrips. Wisdom is your spellcasting ability for these spells.</p>
+        </description>
+        <sheet>
+            <description>You know the Ray of Frost and Frostbite cantrips. (Wisdom)</description>
+        </sheet>
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_RAY_OF_FROST" level="1" />
+			<grant type="Spell" id="ID_XGTE_SPELL_FROSTBITE" level="1" />
+        </rules>
+    </element>
+    <element name="Child of Always Winter" type="Racial Trait" source="starlightwalker" id="ID_RACIAL_TRAIT_SNOW_ELF_CHILD_OF_ALWAYS_WINTER">
+        <description>
+            <p>You are acclimated to high altitude, including elevations above 20,000 feet and are naturally adapted to cold climates, as described in chapter 5 of the Dungeon Master’s Guide. In addition, you have advantage on Acrobatics checks to keep your balance on icy surfaces, and moving through difficult terrain composed of ice and snow costs you no extra movement. However, you are poorly suited to hotter climes, and the DC for Constitution saving throws against exhaustion in extreme heat increases by 2 every hour instead of by 1.</p>
+        </description>
+        <sheet>
+            <description>You are acclimated to high altitude, including elevations above 20,000 feet and are naturally adapted to cold climates, as described in chapter 5 of the Dungeon Master’s Guide. In addition, you have advantage on Acrobatics checks to keep your balance on icy surfaces, and moving through difficult terrain composed of ice and snow costs you no extra movement. However, you are poorly suited to hotter climes, and the DC for Constitution saving throws against exhaustion in extreme heat increases by 2 every hour instead of by 1.</description>
+        </sheet>
+    </element>
+</elements>
